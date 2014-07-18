@@ -52,14 +52,18 @@ h4 {
 	font-weight: normal;
 }
 
-h5 {
-	font-size: 15px;
-	font-color: white;
-	display:none;
+.illustration {
+	position:relative;
 }
 
-h5:hover {
-	display: block;
+.illustration:hover h5 {
+	display: block !important;
+	font-size: 15px;
+	color: white;
+	display:none;
+	position:absolute;
+	z-index:999;
+	top: 50%;
 }
 
 h6 {
@@ -87,6 +91,14 @@ nav {
 	border-bottom: 1px solid #808080;
 	top: 0;
 	padding: 10px 0px 0px 0px;
+}
+
+footer {
+	width: 1200px;
+	bottom: 0px;
+	border-top: 1px solid #404040;
+	padding: 15px 0px 10px 0px;
+	font-size: 10px;
 }
 
 .centered {
