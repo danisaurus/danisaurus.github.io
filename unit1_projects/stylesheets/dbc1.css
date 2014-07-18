@@ -1,7 +1,7 @@
 .col1 {
 	width: 100%;
-	clear:both;
-	display:block;
+	clear: both;
+	display: block;
 }
 
 .col2 {
@@ -53,17 +53,22 @@ h4 {
 }
 
 .illustration {
-	position:relative;
+	position:r  elative;
+}
+
+.illustration h5 {
+	display: none;
 }
 
 .illustration:hover h5 {
 	display: block !important;
 	font-size: 15px;
 	color: white;
-	display:none;
-	position:absolute;
-	z-index:999;
+	display: none;
+	position: absolute;
+	z-index: 999;
 	top: 50%;
+	text-align: center;
 }
 
 h6 {
@@ -107,29 +112,29 @@ footer {
 }
 
 #main-container {
-	width:1200px;
-	margin:0 auto;
-	padding:20px;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 .logo {
-	display:inline-block;
-	float:left;
+	display: inline-block;
+	float: left;
 }
 
 .title {
-	display:inline-block;
-	float:left;
+	display: inline-block;
+	float: left;
 	font-size: 18px;
 	margin-top: 20px;
 }
 
 #intro {
-	height:300px;
+	height: 300px;
 }
 
 .introContent {
-	margin-top:250px;
+	margin-top: 250px;
 }
 
 
@@ -147,8 +152,8 @@ footer {
 }
 
 .author {
-	float:right;
-	font-size:12px !important;
+	float: right;
+	font-size: 12px !important;
 }
 
 .aboutMe {
@@ -160,8 +165,8 @@ footer {
 }
 
 #illustrations img {
-	display:inline-block;
-	float:left;
+	display: inline-block;
+	float: left;
 }
 
 
