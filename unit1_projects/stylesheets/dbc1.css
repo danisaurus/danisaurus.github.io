@@ -1,13 +1,18 @@
 .col1 {
 	width: 100%;
+	clear:both;
+	display:block;
 }
 
 .col2 {
 	width: 50%;
+	display: inline-block;
 }
 
 .col3 {
-	width: 33%;
+	width: 31%;
+	display: inline-block;
+	padding: 0 1.5em 1.5em 0;
 }
 
 .col4 {
