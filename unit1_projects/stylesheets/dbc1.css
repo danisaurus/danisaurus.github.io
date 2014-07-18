@@ -31,6 +31,7 @@ body {
 h1 {
 	font-size: 25px;
 	font-weight: bold;
+	color: #40e0d0;
 }
 
 h2 {
@@ -41,10 +42,12 @@ h2 {
 h3 {
 	font-size: 20px;
 	font-weight: bold;
+	color: #40e0d0;
 }
 
 h4 {
 	font-size: 15px;
+	font-weight: normal;
 }
 
 h5 {
@@ -75,6 +78,15 @@ button {
 	padding: 10px 20px;
 }
 
+nav {
+	width: 1200px;
+	position: fixed;
+	background: white;
+	border-bottom: 1px solid #808080;
+	top: 0;
+	padding: 10px 0px 0px 0px;
+}
+
 .centered {
 	margin:0 auto;
 	text-align: center;
@@ -99,7 +111,7 @@ button {
 }
 
 #intro {
-	height:450px;
+	height:300px;
 }
 
 .introContent {
@@ -109,6 +121,7 @@ button {
 
 #aboutMe {
 	height: 450px;
+	margin: 150px 0px 0px 0px;
 }
 
 .aboutMeImg {
