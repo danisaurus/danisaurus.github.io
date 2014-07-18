@@ -60,15 +60,16 @@ h4 {
 	display: none;
 }
 
-.illustration:hover h5 {
+.illustration:hover .imageTitle {
 	display: block !important;
-	font-size: 15px;
+	font-size: 25px;
 	color: white;
-	display: none;
 	position: absolute;
-	z-index: 999;
-	top: 50%;
-	text-align: center;
+	z-index: 1;
+	height: 211px;
+	width: 372px;
+	background-color: #ff7f50;
+	padding-top: 160px;
 }
 
 h6 {
@@ -96,6 +97,7 @@ nav {
 	border-bottom: 1px solid #808080;
 	top: 0;
 	padding: 10px 0px 0px 0px;
+	z-index: 999;
 }
 
 footer {
