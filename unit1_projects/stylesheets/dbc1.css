@@ -17,6 +17,7 @@
 
 .col4 {
 	width: 25%;
+	display:inline-block;
 }
 
 .col5 {
@@ -130,6 +131,12 @@ nav {
 	width: 300px;
 	height: 300px;
 	overflow: hidden;
+	margin: 0px 100px;
+}
+
+span .author {
+	float:right;
+	font-size:12px;
 }
 
 .aboutMe {
