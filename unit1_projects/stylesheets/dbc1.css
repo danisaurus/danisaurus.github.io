@@ -76,9 +76,14 @@ h6 {
 	font-size:;
 }
 
+ul {
+	-webkit-padding-start: 0px !important;
+}
+
 img {
 	width:100%;
 }
+
 
 button {
  	background: #ff7f50;
