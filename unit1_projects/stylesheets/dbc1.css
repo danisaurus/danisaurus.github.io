@@ -69,6 +69,10 @@ button {
  	background: #ff7f50;
  	color: white;
  	font-family: Gotham, helvetica, sans-serif;
+ 	border: none;
+	border-radius: 20px;
+	font-size: 14px;
+	padding: 10px 20px;
 }
 
 .centered {
