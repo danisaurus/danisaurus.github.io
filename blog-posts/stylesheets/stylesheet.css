@@ -68,6 +68,14 @@ img {
 	width:100%;
 }
 
+a {
+	color:#40e0d0;
+}
+
+a:hover{
+	color:#ecc81f;
+}
+
 nav {
 	width: 1200px;
 	position: fixed;
