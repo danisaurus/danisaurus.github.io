@@ -154,8 +154,9 @@ footer {
 	margin: 50px 0px 50px 0px;
 }
 
-#sidebar {
+#sideBar {
 	float:left;
+	height:100px;
 }
 
 #blogPost {
