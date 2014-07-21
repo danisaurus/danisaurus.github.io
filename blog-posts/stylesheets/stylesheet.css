@@ -56,26 +56,6 @@ h4 {
 	font-weight: normal;
 }
 
-.illustration {
-	position:relative;
-}
-
-.illustration h5 {
-	display: none;
-}
-
-.illustration:hover .imageTitle {
-	display: block !important;
-	font-size: 25px;
-	color: white;
-	position: absolute;
-	z-index: 1;
-	height: 211px;
-	width: 372px;
-	background-color: #ff7f50;
-	padding-top: 160px;
-}
-
 h6 {
 	font-size:;
 }
@@ -86,17 +66,6 @@ ul {
 
 img {
 	width:100%;
-}
-
-
-button {
- 	background: #ff7f50;
- 	color: white;
- 	font-family: Gotham, helvetica, sans-serif;
- 	border: none;
-	border-radius: 20px;
-	font-size: 14px;
-	padding: 10px 20px;
 }
 
 nav {
@@ -181,9 +150,33 @@ footer {
 }
 
 
+p span .firstLetter {
+	color: #40e0d0;
+	font-weight: bold;
+	font-size: 90px;
+	line-height: 0.5;
+	margin-left: -6px;
+}
 
+.example {
+	position:relative;
+}
 
+.example h5 {
+	display: none;
+}
 
+.example:hover .imageTitle {
+	display: block !important;
+	font-size: 25px;
+	color: white;
+	position: absolute;
+	z-index: 1;
+	height: 211px;
+	width: 372px;
+	background-color: #ff7f50;
+	padding-top: 160px;
+}
 
 
 
