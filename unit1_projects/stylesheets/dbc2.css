@@ -172,9 +172,12 @@ footer {
 
 
 .pull-quote {
-	font-size:20px;
-	font-weight:normal;
+	font-size: 18px;
+	font-weight: normal;
 	color: #ff7f50;
+	font-style: italic;
+	width: 85%;
+	margin-top: 200px;
 }
 
 
