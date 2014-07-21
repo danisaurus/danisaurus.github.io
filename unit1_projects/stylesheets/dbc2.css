@@ -56,15 +56,15 @@ h4 {
 	font-weight: normal;
 }
 
-.illustration {
+.example {
 	position:relative;
 }
 
-.illustration h5 {
+.example h5 {
 	display: none;
 }
 
-.illustration:hover .imageTitle {
+.example:hover .imageTitle {
 	display: block !important;
 	font-size: 25px;
 	color: white;
