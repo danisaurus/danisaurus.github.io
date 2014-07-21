@@ -53,7 +53,7 @@ h4 {
 }
 
 .illustration {
-	position:r  elative;
+	position:relative;
 }
 
 .illustration h5 {
@@ -70,10 +70,6 @@ h4 {
 	width: 372px;
 	background-color: #ff7f50;
 	padding-top: 160px;
-}
-
-.illustration:hover ul:last-child .imageTitle {
-	background-color: #40e0d0 !important;
 }
 
 h6 {

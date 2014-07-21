@@ -158,7 +158,25 @@ footer {
 	margin-left: -6px;
 }
 
+.illustration {
+	position:relative;
+}
 
+.illustration h5 {
+	display: none;
+}
+
+.illustration:hover .imageTitle {
+	display: block !important;
+	font-size: 25px;
+	color: white;
+	position: absolute;
+	z-index: 1;
+	height: 211px;
+	width: 372px;
+	background-color: #ff7f50;
+	padding-top: 160px;
+}
 
 
 
