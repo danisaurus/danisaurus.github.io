@@ -154,12 +154,12 @@ footer {
 	margin: 50px 0px 0px 0px;
 }
 
-.sidebar {
+#sidebar {
 	float:left;
 }
 
-.blogPost {
-	float:right;
+#blogPost {
+	float:left;
 }
 
 
