@@ -187,7 +187,12 @@ footer {
 }
 
 
+.blog {
+	float:right;
+	padding:0px 15px 0px 0px;
+}
 
-
-
+.contact {
+	float:right;s
+}
 
