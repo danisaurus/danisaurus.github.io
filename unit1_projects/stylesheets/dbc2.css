@@ -192,12 +192,21 @@ footer {
 .blog {
 	float:right;
 	padding:0px 15px 0px 0px;
+	margin-top:20px;
 }
 
 .contact {
-	float:right;s
+	float:right;
+	margin-top:20px;
 }
 
+a {
+	color:#40e0d0;
+}
+
+a:hover{
+	color:#ecc81f;
+}
 
 
 
