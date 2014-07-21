@@ -155,12 +155,14 @@ footer {
 }
 
 #sideBar {
+	display:inline-block;
 	float:left;
 	height:100px;
 }
 
 #blogPost {
 	float:left;
+	display:inline-block;
 }
 
 
