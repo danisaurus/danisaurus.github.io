@@ -68,7 +68,7 @@ h4 {
 	z-index: 1;
 	height: 211px;
 	width: 372px;
-	background-color: #ff7f50;
+	background-color: rgba(255,127,80, .9);
 	padding-top: 160px;
 }
 

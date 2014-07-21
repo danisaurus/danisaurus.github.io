@@ -75,10 +75,13 @@ h4 {
 	color: white;
 	position: absolute;
 	z-index: 1;
-	height: 300px;
-	width: 785px;
-	background-color: #ff7f50;
+	height: 150px;
+	width: 435px;
+	background-color: rgba(255,127,80, .9);
 	padding-top: 150px;
+	top: 8px;
+	text-align: center;
+
 }
 
 h6 {
