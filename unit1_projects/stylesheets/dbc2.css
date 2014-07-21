@@ -24,6 +24,10 @@
 	width: 20%;
 }
 
+.span3 {
+	width:75%;
+}
+
 body {
 	font-family: Gotham, helvetica, sans-serif;
 	color: #404040;
@@ -157,11 +161,10 @@ footer {
 #sideBar {
 	display:inline-block;
 	float:left;
-	height:100px;
 }
 
 #blogPost {
-	float:left;
+	float:right;
 	display:inline-block;
 }
 
