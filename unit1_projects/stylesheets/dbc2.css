@@ -167,10 +167,15 @@ footer {
 #blogPost {
 	float:right;
 	display:inline-block;
+	margin-bottom: 50px;
 }
 
 
-
+.pull-quote {
+	font-size:20px;
+	font-weight:normal;
+	color: #ff7f50;
+}
 
 
 
