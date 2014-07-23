@@ -1,11 +1,6 @@
 /* General Styles */
 @font-face {
-    font-family: 'super_mario_256regular';
-    src: url('supermario256-webfont.eot');
-    src: url('supermario256-webfont.eot?#iefix') format('embedded-opentype'),
-         url('supermario256-webfont.woff') format('woff'),
-         url('supermario256-webfont.ttf') format('truetype'),
-         url('supermario256-webfont.svg#super_mario_256regular') format('svg');
+    font-family: helvetica, gotham, sans-serif;s
     font-weight: normal;
     font-style: normal;
 }
