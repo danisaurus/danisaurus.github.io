@@ -129,7 +129,7 @@ img {
 }
 
 a {
-	color:#40e0d0;
+	color:#fff;
 }
 
 a:hover{
@@ -137,7 +137,7 @@ a:hover{
 }
 
 nav {
-	width: 1200px;
+	width: 100%;
 	position: fixed;
 	background: white;
 	border-bottom: 1px solid #808080;
