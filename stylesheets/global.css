@@ -205,11 +205,6 @@ footer {
 	margin-top: 200px;
 }
 
-
-#mainContent {
-	margin: 50px 0px 50px 0px;
-}
-
 #sideBar {
 	display:inline-block;
 	float:left;
@@ -257,8 +252,8 @@ footer {
 	color: white;
 	position: absolute;
 	z-index: 1;
-	height: 211px;
-	width: 372px;
+	height: 100%;
+	width: 100%;
 	background-color: #ff7f50;
 	padding-top: 160px;
 }
