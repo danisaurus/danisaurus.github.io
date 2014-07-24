@@ -133,23 +133,22 @@ a {
 }
 
 a:hover{
-	color:#ecc81f;
+	color:#404040;
 }
 
 nav {
 	width: 100%;
 	position: fixed;
-	background: white;
-	border-bottom: 1px solid #808080;
+	background: #40e0d0;
 	top: 0;
 	padding: 10px 0px 0px 0px;
 	z-index: 999;
 }
 
 footer {
-	width: 1200px;
+	width: 100%;
 	bottom: 0px;
-	border-top: 1px solid #404040;
+	background: #40e0d0;
 	padding: 15px 0px 10px 0px;
 	font-size: 10px;
 	text-align:center;
