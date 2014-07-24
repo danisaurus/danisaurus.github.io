@@ -190,11 +190,14 @@ footer {
 	width: 5%;
 }
 
+.links {
+	margin-top:25px;
+}
+
 .title {
 	display: inline-block;
 	float: left;
 	font-size: 18px;
-	margin-top: 20px;
 }
 
 #intro {
