@@ -138,6 +138,7 @@ a:hover{
 
 nav {
 	width: 100%;
+	margin:0 auto;
 	position: fixed;
 	background: #40e0d0;
 	top: 0;
@@ -165,8 +166,8 @@ footer {
 	text-align: center;
 }
 
-#main-container {
-	width: 1200px;
+.main-container {
+	width: 80%;
 	margin: 0 auto;
 	padding: 20px;
 }
