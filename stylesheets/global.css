@@ -97,11 +97,13 @@ h1 {
 	font-size: 25px;
 	font-weight: bold;
 	color: #40e0d0;
+	margin:20px;
 }
 
 h2 {
 	font-size: 20px;
 	font-weight: normal;
+	margin:20px;
 }
 
 h3 {
@@ -129,11 +131,13 @@ img {
 }
 
 a {
-	color:#fff;
+	color:#40e0d0;
+	text-decoration:none;
 }
 
 a:hover{
-	color:#404040;
+	color:#ecc81f;
+	text-decoration:none;
 }
 
 nav {
@@ -142,8 +146,17 @@ nav {
 	position: fixed;
 	background: #40e0d0;
 	top: 0;
-	padding: 10px 0px 0px 0px;
 	z-index: 999;
+}
+
+nav a {
+	color:#fff;
+	text-decoration:none;
+}
+
+nav a:hover{
+	color:#404040;
+	text-decoration:none;
 }
 
 footer {
@@ -169,7 +182,6 @@ footer {
 .main-container {
 	width: 80%;
 	margin: 0 auto;
-	padding: 20px;
 }
 
 .logo {
