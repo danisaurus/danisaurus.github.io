@@ -187,6 +187,7 @@ footer {
 .logo {
 	display: inline-block;
 	float: left;
+	width: 5%;
 }
 
 .title {
