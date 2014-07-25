@@ -138,9 +138,9 @@ hr {
 }
 
 .col3 {
-	width: 31%;
+	width: 32%;
 	display: inline-block;
-	padding: 0 .75em 1.5em .75em;
+	margin: .5%;
 }
 
 .col4 {
@@ -241,43 +241,25 @@ nav a:hover{
 
 /* Portfolio Images */
 
-.image-wrap {
-	display: block;
-	padding: 2%;
-}
-
 #illustration {
 	margin: 150px auto;
 	text-align: center;
 }
 
-#illustration img {
+#illustration li {
 	display: inline-block;
-	float: left;
+	float:left;
 	position: relative;
-	clear: both;
 }
 
 .illustration {
 	position:relative;
+	background: none;
 }
 
 .illustration h5 {
 	display: none;
 }
-
-/*.illustration:hover .imageTitle {
-	display: block !important;
-	font-size: 25px;
-	color: white;
-	position: absolute;
-	z-index: 1;
-	background-color: rgba(255,127,80, .9);
-	padding-top: 39%;
-	bottom: 0%;
-	width: 96%;
-	min-height: 58%;
-}*/
 
 .illustration:hover {
 	background: #ecc81f;
@@ -287,11 +269,11 @@ nav a:hover{
 	-webkit-opacity: 0;
 	-moz-opacity: 0;
 	opacity: 0;
-	-webkit-transition: all 3s ease;
-	-moz-transition: all 3s ease;
-	-ms-transition: all 3s ease;
-	-o-transition: all 3s ease;
-	transition: all 3s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
 }
 
 .illustration:hover .imageTitle{
@@ -300,7 +282,8 @@ nav a:hover{
 	color: white;
 	position: absolute;
 	z-index: 1;
-	bottom: 50%;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .aboutMe img {
