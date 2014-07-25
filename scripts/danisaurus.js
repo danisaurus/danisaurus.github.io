@@ -6,7 +6,8 @@ $(document).ready(function (){
 	$dropdown.on('click', function () {
 		if $dropdownMenu.hasClass('hide') {
 			$this.removeClass('hide').addClass('show');
-		}else {
+		}
+		else {
 			$this.removeClass('show').addClass('hide');
 		}
 	});
