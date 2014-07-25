@@ -258,13 +258,13 @@ nav a:hover{
 	margin: 10px 0px 10px 0px;
 }
 
-.dropdown:active .dropdown-menu {
+.dropdown:hover .dropdown-menu {
 	display: block;
 }
 
-.close-menu:active .dropdown-menu {
+/*.close-menu:active .dropdown-menu {
 	display: none;
-}
+}*/
 
 /* Header */
 
