@@ -25,7 +25,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 125%;
 }
 ol, ul {
 	list-style: none;
@@ -228,8 +228,8 @@ nav a:hover{
 }
 
 .nav-link {
-	padding: 0px 15px 0px 0px;
-	margin-top: 25px;
+	padding: 0 1% 0 0;
+	margin-top: 2%;
 	display: inline-block;
 }
 
@@ -244,6 +244,12 @@ nav a:hover{
 }
 
 /* Portfolio Images */
+
+.image-wrap {
+	display: block;
+	padding: 2%;
+}
+
 #illustration {
 	margin: 150px auto;
 	text-align: center;
@@ -252,10 +258,8 @@ nav a:hover{
 #illustration img {
 	display: inline-block;
 	float: left;
-}
-
-.illustration {
-	position:relative;
+	position: relative;
+	clear: both;
 }
 
 .illustration h5 {
@@ -268,10 +272,11 @@ nav a:hover{
 	color: white;
 	position: absolute;
 	z-index: 1;
-	height: 55%;
-	width: 100%;
 	background-color: rgba(255,127,80, .9);
-	padding-top: 160px;
+	padding-top: 39%;
+	bottom: 0%;
+	width: 96%;
+	min-height: 58%;
 }
 
 .aboutMe img {
