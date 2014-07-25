@@ -238,6 +238,12 @@ nav a:hover{
 
 .dropdown {
 	display: none;
+	color: #fff;
+	margin-top: 17px;
+}
+
+.dropdown:hover {
+	color: #404040;
 }
 
 .dropdown-menu {
@@ -355,5 +361,6 @@ nav a:hover{
 	}
 	.dropdown {
 		display: inline-block;
+		color:;
 	}
 }
