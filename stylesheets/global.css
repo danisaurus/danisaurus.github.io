@@ -25,7 +25,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 125%;
+	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -50,6 +50,7 @@ body {
 	font-family: Gotham, helvetica, sans-serif;
 	color: #404040;
 	width: 100%;
+	line-height: 150%;
 }
 
 h1 {
@@ -104,6 +105,7 @@ footer {
 	text-align:center;
 	margin-top: 50px;
 	float: left;
+	color: #fff;
 }
 
 img {
@@ -121,7 +123,12 @@ button {
 }
 
 hr {
-	margin: 50px 0px;
+	margin: 100px 0 100px 0;
+	border: 1px solid #ecc81f;
+}
+
+p {
+	line-height: 150%;
 }
 
 /* Grid */
@@ -220,19 +227,19 @@ nav a:hover{
 .logo {
 	display: inline-block;
 	float: left;
-	width: 5%;
+	width: 62px;
 }
 
 .nav-link {
-	padding: 0 1% 0 0;
-	margin-top: 2%;
+	padding: 0 10px 0 0;
+	margin-top: 25px;
 	display: inline-block;
 }
 
 /* Header */
 
 #intro {
-	height: 225px;
+	height: 150px;
 }
 
 .introContent {
@@ -242,7 +249,7 @@ nav a:hover{
 /* Portfolio Images */
 
 #illustration {
-	margin: 150px auto;
+	margin: 10% auto;
 	text-align: center;
 }
 
@@ -250,6 +257,10 @@ nav a:hover{
 	display: inline-block;
 	float:left;
 	position: relative;
+}
+
+#illustration button {
+	margin-top:30px;
 }
 
 .illustration {
