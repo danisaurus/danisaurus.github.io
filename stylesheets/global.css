@@ -248,18 +248,20 @@ nav a:hover{
 
 .dropdown-menu {
 	display: none;
-	color: white;
-	background: #1eb9aa;
-	padding: 10px;
 }
 
 .dropdown-menu hr {
-	color:#404040;
-	margin: 10px 0px 10px 0px;
+	border: 1px solid #40e0d0;
+	margin: 15px 0px 15px 0px;
 }
 
 .dropdown:hover .dropdown-menu {
 	display: block;
+	color: white;
+	background: #1eb9aa;
+	padding: 20px 10px 20px 10px;
+	clear: both;
+	text-align:center;
 }
 
 /*.close-menu:active .dropdown-menu {
