@@ -166,6 +166,14 @@ hr {
 	text-align: center;
 }
 
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
 /* Containers */
 
 .main-container {
@@ -219,26 +227,16 @@ nav a:hover{
 	width: 5%;
 }
 
-.links {
-	padding: 5px;
+.nav-link {
+	padding: 0px 15px 0px 0px;
+	margin-top: 25px;
+	display: inline-block;
 }
 
 .title {
 	display: inline-block;
-	float: left;
 	font-size: 18px;
 	color: #fff;
-}
-
-.blog {
-	float:right;
-	padding:0px 15px 0px 0px;
-	margin-top:20px;
-}
-
-.contact {
-	float:right;
-	margin-top:20px;
 }
 
 /* Header */
