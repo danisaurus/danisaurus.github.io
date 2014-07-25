@@ -266,7 +266,7 @@ nav a:hover{
 	display: none;
 }
 
-.illustration:hover .imageTitle {
+/*.illustration:hover .imageTitle {
 	display: block !important;
 	font-size: 25px;
 	color: white;
@@ -277,6 +277,30 @@ nav a:hover{
 	bottom: 0%;
 	width: 96%;
 	min-height: 58%;
+}*/
+
+.illustration:hover {
+	background: #ecc81f;
+}
+
+.illustration:hover .image-wrap img {
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+	-webkit-transition: all 3s ease;
+	-moz-transition: all 3s ease;
+	-ms-transition: all 3s ease;
+	-o-transition: all 3s ease;
+	transition: all 3s ease;
+}
+
+.illustration:hover .imageTitle{
+	display: block !important;
+	font-size: 25px;
+	color: white;
+	position: absolute;
+	z-index: 1;
+	bottom: 50%;
 }
 
 .aboutMe img {
