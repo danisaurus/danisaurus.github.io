@@ -246,17 +246,17 @@ nav a:hover{
 	color: #404040;
 }
 
-.dropdown-menu {
-	display: none;
-}
-
 .dropdown-menu hr {
 	border: 1px solid #40e0d0;
 	margin: 15px 0px 15px 0px;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:focus .dropdown-menu {
 	display: block;
+}
+
+.dropdown-menu {
+	display: none;
 	color: white;
 	background: #1eb9aa;
 	padding: 20px 10px 20px 10px;
