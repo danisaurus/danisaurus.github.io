@@ -355,9 +355,6 @@ nav a:hover{
 	.span3 {
 		width: 100%;
 	}
-	.col3 {
-		width: 49%;
-	}
 }
 
 @media (max-width:620px) {
@@ -370,5 +367,8 @@ nav a:hover{
 	}
 	.dropdown {
 		display: inline-block;
+	}
+	.col3 {
+		width: 49%;
 	}
 }
