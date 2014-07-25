@@ -192,10 +192,6 @@ hr {
 	margin-bottom: 50px;
 }
 
-.image-wrap {
-
-}
-
 #portfolio-wrap {
 	text-align: center;
 }
@@ -260,6 +256,10 @@ nav a:hover{
 	float: left;
 	position: relative;
 	clear: both;
+}
+
+.illustration {
+	position:relative;
 }
 
 .illustration h5 {
