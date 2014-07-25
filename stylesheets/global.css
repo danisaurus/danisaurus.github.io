@@ -255,7 +255,6 @@ nav a:hover{
 }
 
 .dropdown-menu {
-	display: none;
 	color: white;
 	background: #1eb9aa;
 	padding: 20px 10px 20px 10px;
@@ -263,8 +262,13 @@ nav a:hover{
 	text-align:center;
 }
 
-.dropdown:hover .dropdown-menu {
-	display: block !important;
+
+.hide {
+	display:none;
+}
+
+.show {
+	display:block;
 }
 
 /*.close-menu:active .dropdown-menu {
