@@ -236,6 +236,30 @@ nav a:hover{
 	display: inline-block;
 }
 
+.dropdown {
+	display: none;
+}
+
+.dropdown-menu {
+	display: none;
+	color: white;
+	background: #1eb9aa;
+	padding: 10px;
+}
+
+.dropdown-menu hr {
+	color:#404040;
+	margin: 10px 0px 10px 0px;
+}
+
+.dropdown:active .dropdown-menu {
+	display: block;
+}
+
+.close-menu:active .dropdown-menu {
+	display: none;
+}
+
 /* Header */
 
 #intro {
@@ -300,4 +324,36 @@ nav a:hover{
 
 .aboutMe img {
 	margin-bottom:20px;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width:786px) {
+	.main-container {
+		width: 90%;
+	}
+	#sidebar {
+		display: none;
+	}
+	.span3 {
+		width: 100%;
+	}
+	.col3 {
+		width: 49%;
+	}
+}
+
+@media (max-width:620px) {
+
+	.nav-link {
+		display: none;
+	}
+	.title {
+		display: none;
+	}
+	.dropdown {
+		display: inline-block;
+	}
 }
