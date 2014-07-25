@@ -1,15 +1,13 @@
 $(document).ready(function (){
-	var $this = $(this)
-		$dropdownMenu = $('.dropdown-menu');
-		$dropdown = $('.dropdown')
+	var $this = $(this),
+		$dropdownMenu = $('.dropdown-menu'),
+		$dropdown = $('.dropdown');
 
 	$dropdown.on('click', function () {
 		if $dropdownMenu.hasClass('hide') {
-			$dropdownMenu.removeClass('hide').addClass('show');
+			$this.removeClass('hide').addClass('show');
 		}else {
-			$dropdownMenu.removeClass('show').addClass('hide');
+			$this.removeClass('show').addClass('hide');
 		}
 	});
-
-
 });
