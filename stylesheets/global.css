@@ -265,7 +265,7 @@ nav a:hover{
 	background: #ecc81f;
 }
 
-.illustration:hover .image-wrap img {
+.illustration:hover img {
 	-webkit-opacity: 0;
 	-moz-opacity: 0;
 	opacity: 0;
@@ -284,6 +284,7 @@ nav a:hover{
 	z-index: 1;
 	width: 100%;
 	margin: 0 auto;
+	bottom: 50%;
 }
 
 .aboutMe img {
