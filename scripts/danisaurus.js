@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$dropdown = $('.dropdown');
 
 	$dropdown.on('click', function(){
+		console.log('yo')
 		if ($dropdownMenu.hasClass('hide')) {
 			$this.removeClass('hide').addClass('show');
 		}
