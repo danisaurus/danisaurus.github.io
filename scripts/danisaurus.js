@@ -6,11 +6,10 @@ $(document).ready(function(){
 	$dropdown.on('click', function(){
 		console.log('yo')
 		if ($dropdownMenu.hasClass('hide')) {
-			console.log('ugh')
 			$dropdownMenu.removeClass('hide').addClass('show');
 		}
 		else {
-			$this.removeClass('show').addClass('hide');
+			$dropdownMenu.removeClass('show').addClass('hide');
 		}
 	});
 });
