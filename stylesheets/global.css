@@ -264,11 +264,13 @@ nav a:hover{
 
 
 .hide {
-	height: 0;
+	height: 0px;
+	display: none;
 }
 
 .show {
 	height: auto;
+	display: block;
 }
 
 /*.close-menu:active .dropdown-menu {
