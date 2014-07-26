@@ -264,12 +264,10 @@ nav a:hover{
 
 
 .hide {
-	height: 0px;
 	display: none;
 }
 
 .show {
-	height: auto;
 	display: block;
 }
 
@@ -347,9 +345,7 @@ nav a:hover{
 
 /* Media Queries */
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+@media (max-device-width : 480px) {
 	.col3 {
 		width: 100%;
 	}
