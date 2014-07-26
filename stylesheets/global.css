@@ -264,11 +264,11 @@ nav a:hover{
 
 
 .hide {
-	display:none;
+	height: 0;
 }
 
 .show {
-	display:block;
+	height: auto;
 }
 
 /*.close-menu:active .dropdown-menu {
@@ -345,6 +345,15 @@ nav a:hover{
 
 /* Media Queries */
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.col3 {
+		width: 100%;
+	}
+}
+
+
 @media (max-width:786px) {
 	.main-container {
 		width: 90%;
@@ -372,3 +381,5 @@ nav a:hover{
 		width: 49%;
 	}
 }
+
+
