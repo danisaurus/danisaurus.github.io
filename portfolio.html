@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <meta type="author" content="Dani Dirks">
 <meta type="description" content="Dani Dirks Portfolio">
 <title>Portfolio</title>
 
 <link rel="stylesheet" href="/stylesheets/global.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 </head>
 
@@ -20,8 +22,21 @@
 			<div class="nav-link right"><a href="http://danisaurus.github.io/blog-posts/recent-posts.html">Blog</a></div>
 			<div class="nav-link right"><a href="http://danisaurus.github.io/portfolio.html">Portfolio</a></div>
 			<div class="nav-link right"><a href="http://danisaurus.github.io/about-me.html">About Me</a></div>
+			<div class="dropdown right"><i class="fa fa-bars fa-2x"></i></div>
 		</div>
-	</nav>
+		<div class="dropdown-menu hide">
+			<div class="main-container">
+				<div><a href="http://danisaurus.github.io/about-me.html">About Me</a></div>
+				<hr>
+				<div><a href="http://danisaurus.github.io/portfolio.html">Portfolio</a></div>
+				<hr>
+				<div><a href="http://danisaurus.github.io/blog-posts/recent-posts.html">Blog</a></div>
+				<hr>
+				<div><a href="mailto:danidirks@gmail.com?Subject=Oh%20What%20Up" target="_top">Contact</a></div>
+			</div>
+		</div>
+		</a>
+	</nav> 
 
 	<div class="main-container">
 	  	<div id="illustration">
@@ -123,4 +138,6 @@
 		<div class="footer">All work, copy, and code on this site are created and owned by <strong>Danielle Dirks</strong> unless otherwise stated.</div>
 	</footer>
 </body>
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/scripts/danisaurus.js"></script>
 </html>
