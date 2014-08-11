@@ -1,5 +1,8 @@
 /* Side Bar */
 
+h3 {
+	margin-bottom:10px;
+}
 
 #sideBar {
 	display: inline-block;
