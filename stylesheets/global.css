@@ -355,13 +355,15 @@ nav a:hover{
 	}
 }
 
+@media (max-width:1060px) {
+	#sidebar {
+		display:none;
+	}
+}
 
 @media (max-width:786px) {
 	.main-container {
 		width: 90%;
-	}
-	#sidebar {
-		display: none;
 	}
 	.span3 {
 		width: 100%;
