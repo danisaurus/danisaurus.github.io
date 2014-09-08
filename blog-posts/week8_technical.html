@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<meta type="author" content="Dani Dirks">
+<meta type="description" content="Blog Template">
+<title>Blog Template</title>
+
+<link rel="stylesheet" href="/blog-posts/stylesheets/blog.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="/stylesheets/global.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+	<nav>
+		<div class="main-container">
+			<div class="logo"><a href="http://danisaurus.github.io"><img src="/unit1_projects/images/logo.png"></div>
+			<div class="nav-link left">Danielle Dirks</div>
+			<div class="nav-link right"><a href="mailto:danidirks@gmail.com?Subject=Oh%20What%20Up" target="_top">Contact</a></div>
+			<div class="nav-link right"><a href="http://danisaurus.github.io/blog-posts/recent-posts.html">Blog</a></div>
+			<div class="nav-link right"><a href="http://danisaurus.github.io/portfolio.html">Portfolio</a></div>
+			<div class="nav-link right"><a href="http://danisaurus.github.io/about-me.html">About Me</a></div>
+			<div class="dropdown right"><i class="fa fa-bars fa-2x"></i></div>
+		</div>
+		<div class="dropdown-menu hide">
+			<div class="main-container">
+				<div><a href="http://danisaurus.github.io/about-me.html">About Me</a></div>
+				<hr>
+				<div><a href="http://danisaurus.github.io/portfolio.html">Portfolio</a></div>
+				<hr>
+				<div><a href="http://danisaurus.github.io/blog-posts/recent-posts.html">Blog</a></div>
+				<hr>
+				<div><a href="mailto:danidirks@gmail.com?Subject=Oh%20What%20Up" target="_top">Contact</a></div>
+			</div>
+		</div>
+		</a>
+	</nav> 
+	<div class="main-container">
+		<section id="intro" class="col1 centered">
+			<div class="introContent centered center-text">
+				<h1>Regular Expressions</h1>
+				<h2>AKA Regex</h2>
+				<h4>September 8, 2014</h4>
+			</div>
+		</section>
+		<hr>
+		<section id="mainContent">
+			<div id="sideBar" class="col4">
+			</div>
+			<div id="blogPost" class="span3">
+					<p><span class="firstLetter">A</span>ccording to Wikipedia a regular expression (abbreviated regex or regexp) and sometimes called arational expression[1][2] is a sequence of characters that forms a search pattern, mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations.</p>
+
+					<p>These can be used to represent alternatives in strings such as locating the same word spelled two different ways in a text editor, for example the regular expression seriali[sz]e matches both "serialise" and "serialize".   A "match" is the piece of text, or sequence of bytes or characters that pattern was found to correspond to by the regex processing software.</p>
+
+					<p>Ruby and Javascript both have built in regex capabilities whereas other popular languages like Java, Python, and C++ rely on separate libraries. </p>
+
+					<h3>Common Example of A Regex</h3>
+					
+					<p><strong>\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b</strong> is a more complex pattern that describes an email address. You can use a pattern like this to search through a text file to find an email address or verify if a particular string looks like an email address, or even check in a form field that an email address is formatted correctly in order to raise an error. </p>
+
+					<h3>Breaking Down the Email Regex</h3>
+
+					<p>Although regex syntax can be intimidating the site Regexbuddy.com gives a brilliant breakdown of what various parts of a regex expression mean. Take our email example. The following breakdown describes what each piece of the regex is doing:</p>
+
+					<p><strong>\b[A-Z0-9._%+-]++@[A-Z0-9.-]+\.[A-Z]{2,6}\b</strong></p>
+
+					<p><strong>\b</strong>  :  Assert position at a word boundary</p>
+					
+					<p><strong>[A-Z0-9._%+-]</strong>  : Match a single character out of the list: one of the characters "._%+-", or in the range between A and Z, or in the range between 0 and 9</p>
+
+					<p><strong>++</strong> : Between one and unlimited times, as many times as possible, without giving back (possessive)</p>
+
+					<p><strong>@</strong> :  Match the character "@" literally</p>
+
+					<p><strong>[A-Z0-9.-]</strong> :  Match a single character out of the list: one of the characters ".-", or in the range between A and Z, or in the range between 0 and 9</p>
+
+					<p><strong>+</strong> :  Between one and unlimited times, as many times as possible, giving back as needed (greedy)</p>
+
+					<p><strong>\.</strong> :  Match the character "." literally</p>
+
+					<p><strong>[A-Z]</strong> : Match a single character in the range between A and Z</p>
+
+					<p><strong>{2,6}</strong> :  Between 2 and 6 times, as many times as possible, giving back as needed (greedy)</p>
+
+					<p><strong>\b</strong> : Assert position at a word boundary</p>
+ 
+					<h3>Why use regex?</h3>
+
+					<p>Using regex will help your software run much faster and reduce your development time. Regex only takes one line of code to check the existence of an email address versus the many lines that a plain text search algorithm can take.</p>
+
+					<p>Regexes are ideal solutions for searching, texting processing, and validating data.  For example, if you have a search box in which a user can type in their search, you would want to account for any possible misspellings. Using regex, for a word such as separate, you could take care of it and all of its common misspellings by using the regex s[ae]p[ae]r[ae]te. </p>
+
+					<h3>References:</h3>
+					<p>http://en.wikipedia.org/wiki/Regular_expression</p>
+					<p>http://www.regular-expressions.info/tutorial.html</p>
+					<p>http://www.regexbuddy.com/regex.html</p>
+			</div>
+		</section>
+	</div>
+	<footer class="col1">
+		<div class="footer">All work, copy, and code on this site are created and owned by <strong>Danielle Dirks</strong> unless otherwise stated.</div>
+	</footer>
+</body>
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/scripts/danisaurus.js"></script>
+</html>
