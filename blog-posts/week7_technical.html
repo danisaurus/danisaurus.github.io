@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<meta type="author" content="Dani Dirks">
+<meta type="description" content="Blog Template">
+<title>Blog Template</title>
+
+<link rel="stylesheet" href="/blog-posts/stylesheets/blog.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="/stylesheets/global.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+	<nav>
+		<div class="main-container">
+			<div class="logo"><a href="http://danisaurus.github.io"><img src="/unit1_projects/images/logo.png"></div>
+			<div class="nav-link left">Danielle Dirks</div>
+			<div class="nav-link right"><a href="mailto:danidirks@gmail.com?Subject=Oh%20What%20Up" target="_top">Contact</a></div>
+			<div class="nav-link right"><a href="http://danisaurus.github.io/blog-posts/recent-posts.html">Blog</a></div>
+			<div class="nav-link right"><a href="http://danisaurus.github.io/portfolio.html">Portfolio</a></div>
+			<div class="nav-link right"><a href="http://danisaurus.github.io/about-me.html">About Me</a></div>
+			<div class="dropdown right"><i class="fa fa-bars fa-2x"></i></div>
+		</div>
+		<div class="dropdown-menu hide">
+			<div class="main-container">
+				<div><a href="http://danisaurus.github.io/about-me.html">About Me</a></div>
+				<hr>
+				<div><a href="http://danisaurus.github.io/portfolio.html">Portfolio</a></div>
+				<hr>
+				<div><a href="http://danisaurus.github.io/blog-posts/recent-posts.html">Blog</a></div>
+				<hr>
+				<div><a href="mailto:danidirks@gmail.com?Subject=Oh%20What%20Up" target="_top">Contact</a></div>
+			</div>
+		</div>
+		</a>
+	</nav> 
+	<div class="main-container">
+		<section id="intro" class="col1 centered">
+			<div class="introContent centered center-text">
+				<h1>Improving SQL Queries</h1>
+				<h2>Through Proper Indexing</h2>
+				<h4>September 8, 2014</h4>
+			</div>
+		</section>
+		<hr>
+		<section id="mainContent">
+			<div id="sideBar" class="col4">
+				<div class="pull-quote"></div>
+			</div>
+			<div id="blogPost" class="span3">
+					<p><span class="firstLetter">A</span>s a newb to sql, im still trying to get the hang of building schemas and accessing data, but one of the easiest things we can do to decrease the amount of time to run advanced queries on a large dataset is by building proper indexing structures into your schema.</p>
+
+					<p>One of the best explanations of indexing that I’ve come across looks at a database like a library. Consider each piece of data being represented by a book.  When data is not properly indexed, it is like asking a librarian to physically walk through every shelf in the library looking for the particular book you need. In a library of a thousand books this could take a very long time. But consider a library of ten million books!</p>
+					
+					<h3>#1  Creating A Primary Key</h3>
+					
+					<p>In the example above, the library has no way of organizing their books. This example represents a table that contains no primary key. </p>
+
+					<p>One of the simplest ways for the librarian to organize the books would be to assign each book a number as it comes in. Giving a table a primary key is equal to organizing a library by the dewey decimal system. It gives a reference number to ask for when looking for a certain book, or a certain piece of data.  In a library you want to number each book and arrange the book shelves according to their numbers. By doing this, the librarian can organize the books in numerical order, and organize the shelves based on the book numbers on that shelf.  If a patron comes in looking for a book with a particular number, the librarian can go to the shelf containing that particularly numbered book, and then look on that shelf for that book. It will now take two minutes to find the book rather than two or more hours.</p>
+
+					<h3>#2  Creating A Non-Clustered Index</h3>
+
+					<p>Creating  a primary key, however, only solves one problem in our data search. What if the library patron knows the name of the book they want, but not the book’s serial number?</p>
+
+					<p>The librarian now has to go through all the books individually to find the book title that the patron wants. To solve this problem, the librarian can create a catalog or index that contains the book title and its corresponding serial number. This index can be alphabetically organized and books can be grouped by the first letter of their title.</p>
+					
+					<p>Next time the patron asks for a book titled say “Walking With Dinosaurs”, the librarian merely has to go to section “W” of the catalog, look for “Walking With Dinosaurs”, and look for its corresponding serial number. Once she has that it will take her two minutes to walk to the correct shelf in the library and find the book.</p>
+
+					<p>In a library, you would want to create a catalogue or index for every way that a patron may want to find a book. What if the patron knows the author, but doesn’t know the book title? What if they know the subject, but not the title or the author?</p>
+
+					<p>Each non-clustered index page will contain a range of product names along with their corresponding primary key values. When a product is searched using the product name in the search criteria, the database engine will first seek the non-clustered index tree for product name to find the primary key value of the book. Once found, the database engine then searches the clustered index tree with the primary key to find the row for the actual item that is being searched.</p>
+
+					<p>But where should we create non-clustered indexes?</p>
+
+					<p>According to codeproject.com, the following criteria should be followed when creating non-clustered indexes. Non-clustered indexes should be put on columns that are:</p>
+
+					<ul>
+						<li>Frequently used in the search criteria</li>
+						<li>Used to join other tables</li>
+						<li>Used as foreign key fields</li>
+						<li>Of having high selectivity (column which returns a low percentage (0-5%) of rows from a total number of rows on a particular value)</li>
+						<li>Used in the ORDER BY clause</li>
+						<li>Of type XML</li>
+					</ul>
+
+					<h3>#3 Creating Covering Indexes</h3>
+
+					<p>Covering indexes are created in order to say what other values should be stored as columns in the index page besides the Primary Key Values. Covered indexes should be created to include only a few columns that are frequently used in the Select queries.</p>
+
+ 					<p>For example, if you are creating an index page based on author, you may also want to store values for Book Title, and Publisher Name. If you include too many covered indexes, too much memory may be required to store the additional columns, and you risk over consumption of memory and slow performance.</p>
+
+					<p>To create this particular index you can use the following code:</p>
+
+					<pre><code>CREATE INDEX Library_AuthorName<!--Index name-->
+					ON dbo.library(AuthorName)<!--Column on which index is to be created-->
+					INCLUDE(BookTitle, Published_on)<!--Additional column values to include--></code></pre>
+
+					<p>How this works:</p>
+
+					<p>You want to know the Book Title and the Date of Publish for every Book written by a particular Author.  your select statement would look like this:</p> 
+
+					<pre><code>SELECT, Book Title FROM Library WHERE AuthorName= ‘Edgar Allen Poe’</code></pre>
+
+					<p>For each primary key, the SQL Server engine "seeks" into the clustered index tree to find the actual row locations in the corresponding page.</p>
+
+					<p>For each primary key, when found, the SQL Server engine selects the Book Title column values from the corresponding rows.</p>
+
+					<p>Please note that in the above steps, for each of the primary key entries for AuthorName= ‘Edgar Allen Poe’, the SQL Server engine has to search the clustered index tree (say there are a thousand books authored by Edgar Allan Poe, it would have to search the clustered index tree a thousand times) to retrieve BookTitle in the query. In order to simplify this and skip the step of having to go back into the clustered index and search a thousand times for each bookTitle by edgar allen poe  you could do this faster by just seeking into the non-clustered index tree for AuthorName and reading the column values directly from that page.</p>
+
+					<h3>IN SUMMARY:</h3>
+
+					<p>The most basic way to fix query speed problems for databases containing large amounts of data is to create or add the appropriate primary keys, non-clustered indexes, and covered indexes. </p>
+
+					<p>Database optimization does not stop there, however. There are a number of other techniques we must look at, but I will save those for a later date.</p>
+
+					<h3>References:</h3>
+
+					<p>http://www.codeproject.com/Articles/34372/Top-steps-to-optimize-data-access-in-SQL-Server</p>
+			</div>
+		</section>
+	</div>
+	<footer class="col1">
+		<div class="footer">All work, copy, and code on this site are created and owned by <strong>Danielle Dirks</strong> unless otherwise stated.</div>
+	</footer>
+</body>
+<script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/scripts/danisaurus.js"></script>
+</html>

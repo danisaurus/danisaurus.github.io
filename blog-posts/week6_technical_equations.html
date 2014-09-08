@@ -1,0 +1,20 @@
+class Father
+	attr_accessor :last_name
+	
+	def initialize(last_name)
+		@last_name = last_name
+	end
+	
+	def last_name
+		puts "your last name is #{@last_name}"
+	end
+end
+
+class Daughter < Father
+end
+
+last_name = "Dirks"
+dad = Father.new(last_name)
+dani = Daughter.new(last_name)
+dad.last_name
+dani.last_name
