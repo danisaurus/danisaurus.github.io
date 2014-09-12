@@ -181,6 +181,11 @@ p {
 	float:right;
 }
 
+.alpha {
+	margin-left:0px;
+	padding-left: 0px;
+}
+
 /* Containers */
 
 .main-container {
