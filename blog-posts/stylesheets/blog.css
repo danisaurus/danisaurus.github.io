@@ -1,8 +1,9 @@
 /* Side Bar */
-
-h3 {
-	margin-bottom:20px;
+#blogpost h3{
+	margin-bottom: 15px;
+	margin-top: 20px;
 }
+
 
 #sideBar {
 	display: inline-block;
@@ -90,5 +91,5 @@ h3 {
 
 .hljs{
 	margin: 20px 0px;
-	padding: 0px 25px;
+	padding: 0px 25px !important;
 }
