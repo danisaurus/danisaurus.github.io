@@ -17,7 +17,7 @@ $(document).ready(function(){
 	$("pre").snippet("html");
 	    // Finds <pre> elements with the class "htmlCode"
 	    // and snippet highlights the HTML code within.
-	$("pre").snippet("css",{style:"whitengrey"});
+	$("pre").snippet("css",{style:"sh_whitengrey"});
 	    // Finds <pre> elements with the class "styles"
 	    // and snippet highlights the CSS code within
 	    // using the "greenlcd" styling.
