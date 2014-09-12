@@ -13,8 +13,6 @@ $(document).ready(function(){
 		}
 	});
 
-
-	$("pre").snippet("html");
 	$("pre").snippet("css",{style:"sh_whitengrey"});
 });
 
