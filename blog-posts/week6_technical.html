@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="/blog-posts/stylesheets/blog.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="/stylesheets/global.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/blog-posts/stylesheets/jquery.snippet.css" type="text/css" media="screen"/>
 
 </head>
 <body>
@@ -50,70 +51,174 @@
 				<div class="pull-quote">"I try to dress classy and dance cheesy."<br><span class="author">Psy</span></div>
 			</div>
 			<div id="blogPost" class="span3">
-					<p><span class="firstLetter">T</span>he cycle method in ruby infinitely calls a block for each element in a collection.</p> 
-					<p>Take array a for example:</p>
-					<code>a = [“a, b, c”]</code>
-					<p>When you apply the cycle method to the array and you apply a block, the cycle function passes each item into the block. cycle will continue to go through the array forever unless it encounters a break statement in the block.</p>
-					<code>a.cycle {|a| puts a}  =>  a, b, c, a, b, c, a, b, c …. </code>
-					<p>If you want to stop the cycle after a certain number of well… cycles. Then you must state that when declaring the method.</p>
-					<code>a.cycle(4) {|a| puts a } => a, b, c, a, b, c, a, b, c, a, b, c</code>
-					<p>A more real world example of this is as follows:</p>
-					<code>sandwich_array = [“Po Boy”,  “PB&J”, “BLT”, “Reuben”, “Grilled Cheese”, “Tuna”]
-					sandwich_array.cycle {|sandwich| puts sandwich}
-					=>Po Boy
-					   PB&J 
-					BLT
-					Reuben
-					Grilled Cheese 
-					Tuna
+					<p><span class="firstLetter">R</span>eusability is extremely important when creating DRY code. There are two widely used ways to reuse the code of existing objects. These are inheritance and composition. So what’s the difference?</p>
 
-					…</code>
+					<h3>What is Inheritance?</h3>
 
-					<p>In order to break this within the cycle you can use do and declare a certain break point. Example:</p>
-					<code>sandwich_array.cycle do |sandwich|
-						puts sandwich
-						break if sandwich == “Reuben”
-					end
-					=>Po Boy
-					PB & J
-					BLT
-					Reuben
-					=> Nil</code>
+					<p>According to the widely accepted dictionary that is wikipedia, inheritance is “a way to reuse code of existing objects, or to establish a subtype from an existing object, or both”</p>
 
-					<p>While doing looking up the practical uses of the cycle method, I came across this really cool everyday use case for it. In this case, one can use the cycle to create multiple enumerators to assign meals to a particular chef each of days. </p>
-					<code># Create an enumerator for days
-					days = %w{Monday Tuesday Wednesday Thursday Friday Saturday Sunday}.cycle
-					=> #
+					<p>The inheritance method basically states that the subclass with inherit all or most of the superclass plus it’s own methods.  Any action that you do to the subclass works as though they were done to an instance of the superclass. For this reason you put common functionality in the superclass and then specialize it for the subclass. There are three types of inheritance: implicit, override explicitly, and Alter Before and After, but as you will see inheritance can often grow out of hand and be difficult to test. </p>
 
-					# Create an enumerator for dinners
-					dinners = ["Jerk chicken", "Lamb vindaloo", "Chicken fried steak", \
-					"Yeung Chow fried rice", "Tonkatsu", "Coq au Vin", "Chunky bacon", \
-					"Pierogies", "Salisbury steak", "Bibim Bap", \
-					"Roast beef", "Souvlaki"].cycle
-					=> #
+					<h3>Implicit Inheritance</h3>
 
-					# Create an enumerator for chefs
-					chefs = [“Wolfgang Puck”, “Rachel Ray”, “Julia Childs”, “Martha Stewart”, “Anthony Bourdain”, “The Pioneer Woman”, “The Iron Chef”]
+					<p>Implicit inheritance creates one super “Parent” class and all subclasses implicitly inherit those methods. </p>
 
-					# Let's assign dinner-cooking duties to the crew!
-					# We can use the .next function when using the cycle in order to cycle to the next item in the list and breaks there before being called to move on again.
+					<p>Example:</p>
 
-					10.times do
-					    day = days.next
-					    dinner = dinners.next
-					    chef = chefs.next[1]
-					    puts "On #{day}, #{chef} will prepare #{dinner}."
-					end
-					=> On Monday, Wolfgang Puck will prepare Jerk chicken.
-					On Tuesday, Rachel Ray will prepare Lamb vindaloo.
-					On Wednesday, Julia Childs will prepare Chicken fried steak.
-					On Thursday, Martha Stewart will prepare Yeung Chow fried rice.
-					On Friday, Anthony Bourdain will prepare Tonkatsu.
-					On Saturday, The Pioneer Woman will prepare Coq au Vin.
-					On Sunday, The Iron Chef will prepare Chunky bacon.
-					On Monday, Wolfgang Puck will prepare Pierogies.
-					On Tuesday, Rachel Ray will prepare Salisbury steak.
-					On Wednesday, Julia Childs will prepare Bibim Bap.</code>
+<pre class="code codeStyle"><code>
+
+class Father
+	attr_accessor :last_name
+	
+	def initialize(last_name)
+		@last_name = last_name
+	end
+	
+	def last_name
+		puts "Your last name is #{@last_name.capitalize}."
+	end
+end
+
+class Daughter < Father
+
+end
+
+last_name = "Dirks"
+dad = Father.new(last_name)
+dani = Daughter.new(last_name)
+dad.last_name
+dani.last_name
+
+
+Result:
+
+Your last name is Dirks.
+Your last name is Dirks.
+
+</code></pre>       
+
+				<p>As you can see, the Daughter subclass inherits the method last_name from the Father class. last_name can be called on daughter now using implicit inheritance. </p>
+
+				<h3>Override Explicitly</h3>
+
+				<p>Calling functions implicity can be a problem when you want your subclass to behave differently than their superclass. In the case of our Father Daughter example if we wanted the Daughter to have a different last name we would have to override the last_name function in the Daughter subclass.</p>
+
+<pre class="code codeStyle"><code>
+
+class Father
+	attr_accessor :last_name
+	
+	def initialize(last_name)
+		@last_name = last_name
+	end
+	
+	def last_name
+		puts "Your last name is #{@last_name.capitalize}."
+	end
+
+	
+end
+
+class Daughter < Father
+
+	def last_name
+		@last_name = "K"
+		puts "Your last name is #{@last_name.capitalize}."
+	end
+
+end
+
+last_name = "Dirks"
+dad = Father.new(last_name)
+dani = Daughter.new(last_name)
+dad.last_name
+dani.last_name
+
+</code></pre>
+
+					<p>In this case our results are:</p>
+
+					<p>Your last name is Dirks.</p>
+					<p>Your last name is K.</p>
+
+					<p>We changed the last name of the Daughter class by overriding the last_name method within the subclass. This doesn’t seem very practical for future uses of the subclass however.</p>
+
+					<h3>Alter Before or After</h3>
+
+					<p>The last way to use inheritance is if you want to alter behavior before or after the superclass runs.You do this by overriding the function like in the override explicitly method and then use the build in super function to call the superclass function.</p>
+
+<pre class="code codeStyle"><code>
+
+class Father
+	attr_accessor :last_name
+	
+	def initialize(last_name)
+		@last_name = last_name
+	end
+	
+	def last_name
+		puts "Your last name is #{@last_name.capitalize}."
+	end
+
+	
+end
+
+class Daughter < Father
+
+	def last_name
+		@last_name = "K"
+		puts "Your last name is #{@last_name.capitalize}."
+		super
+		@last_name = "P"
+		puts "Your last name is #{@last_name.capitalize}."
+	end
+end
+
+last_name = "Dirks"
+dad = Father.new(last_name)
+dani = Daughter.new(last_name)
+dad.last_name
+dani.last_name
+
+</code></pre>
+
+				<p>The result you get from this is:</p>
+
+				<p>Your last name is Dirks.</p>
+				<p>Your last name is K.</p>
+				<p>Your last name is K.</p>
+				<p>Your last name is P.</p>
+
+				<p>If you put in the Daughter subclass like this:</p>
+
+<pre class="code codeStyle"><code>
+
+class Daughter < Father
+
+	def last_name
+		puts "Your last name is #{@last_name.capitalize}."
+		super
+		@last_name = "P"
+		puts "Your last name is #{@last_name.capitalize}."
+	end
+end
+
+</code></pre>
+
+				<p>Your result becomes:</p>
+
+				<p>Your last name is Dirks.</p>
+				<p>Your last name is Dirks.</p>
+				<p>Your last name is P.</p>
+
+
+				<p>I still don’t get why you would want to use this format of inheritance. </p>
+
+				<h3>Composition:</h3>
+
+				<p>Composition is a technique by which classes may achieve polymorphic behavior and code reuse by containing other classes that implement the desired functionality instead of through inheritance.</p>
+				<p>In using composition, rather than rewriting and overriding already built code, you can call the code that you need by calling on modules in your methods. </p>
+
 
 
 			</div>
@@ -125,4 +230,5 @@
 </body>
 <script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/scripts/danisaurus.js"></script>
+<script type="text/javascript" src="/scripts/jquery.snippet.js"></script>
 </html>
