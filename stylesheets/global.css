@@ -186,6 +186,10 @@ p {
 	padding-left: 0px;
 }
 
+
+.clear {
+	clear:both;
+}
 /* Containers */
 
 .main-container {
