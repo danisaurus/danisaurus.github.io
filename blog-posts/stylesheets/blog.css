@@ -87,6 +87,8 @@ h3 {
 	background-color: #40e0d0;
 }
 
-code {
-	margin:10px 0px 10px 0px;
+
+.hljs{
+	margin: 20px 0px;
+	padding: 0px 25px;
 }
