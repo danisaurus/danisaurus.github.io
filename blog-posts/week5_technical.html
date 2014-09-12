@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="/blog-posts/stylesheets/blog.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="/stylesheets/global.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="/jquery.snippet.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 
 </head>
 <body>
@@ -55,11 +56,11 @@
 					<p>Take array a for example:</p>
 					<pre><code>a = [“a, b, c”]</code></pre>
 					<p>When you apply the cycle method to the array and you apply a block, the cycle function passes each item into the block. cycle will continue to go through the array forever unless it encounters a break statement in the block.</p>
-					<pre><pre><code>a.cycle {|a| puts a}  =>  a, b, c, a, b, c, a, b, c …. </code></pre></pre>
+					<pre><code>a.cycle {|a| puts a}  =>  a, b, c, a, b, c, a, b, c …. </code></pre>
 					<p>If you want to stop the cycle after a certain number of well… cycles. Then you must state that when declaring the method.</p>
 					<pre><code>a.cycle(4) {|a| puts a } => a, b, c, a, b, c, a, b, c, a, b, c</code></pre>
 					<p>A more real world example of this is as follows:</p>
-					<pre>
+					<pre><code>
 
 sandwich_array = [“Po Boy”,  “PB&J”, “BLT”, “Reuben”, “Grilled Cheese”, “Tuna”]
 sandwich_array.cycle {|sandwich| puts sandwich}
@@ -70,10 +71,10 @@ sandwich_array.cycle {|sandwich| puts sandwich}
 	Reuben
 	Grilled Cheese 
 	Tuna
-					</pre>
+					</code></pre>
 
 					<p>In order to break this within the cycle you can use do and declare a certain break point. Example:</p>
-					<pre>
+					<pre><code>
 
 sandwich_array.cycle do |sandwich|
 	puts sandwich
@@ -85,10 +86,10 @@ end
 	BLT
 	Reuben
 
-=>	Nil</pre>
+=>	Nil</code></pre>
 
 					<p>While doing looking up the practical uses of the cycle method, I came across this really cool everyday use case for it. In this case, one can use the cycle to create multiple enumerators to assign meals to a particular chef each of days. </p>
-					<pre>
+					<pre><code>
 # Create an enumerator for days
 
 days = %w{Monday Tuesday Wednesday Thursday Friday Saturday Sunday}.cycle
@@ -124,7 +125,7 @@ end
 	On Sunday, The Iron Chef will prepare Chunky bacon.
 	On Monday, Wolfgang Puck will prepare Pierogies.
 	On Tuesday, Rachel Ray will prepare Salisbury steak.
-	On Wednesday, Julia Childs will prepare Bibim Bap.</pre>
+	On Wednesday, Julia Childs will prepare Bibim Bap.</code></pre>
 
 
 			</div>
@@ -135,6 +136,5 @@ end
 	</footer>
 </body>
 <script type="text/javascript" src="/scripts/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="jquery.snippet.js"></script>
 <script type="text/javascript" src="/scripts/danisaurus.js"></script>
 </html>

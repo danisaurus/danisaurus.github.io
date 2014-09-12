@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="/blog-posts/stylesheets/blog.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="/stylesheets/global.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="/blog-posts/stylesheets/jquery.snippet.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 
 </head>
 <body>
@@ -65,7 +66,7 @@
 
 					<p>Example:</p>
 
-<pre>
+<pre><code>
 
 class Father
 	attr_accessor :last_name
@@ -95,7 +96,7 @@ Result:
 Your last name is Dirks.
 Your last name is Dirks.
 
-</pre>       
+</code></pre>       
 
 				<p>As you can see, the Daughter subclass inherits the method last_name from the Father class. last_name can be called on daughter now using implicit inheritance. </p>
 
@@ -103,7 +104,7 @@ Your last name is Dirks.
 
 				<p>Calling functions implicity can be a problem when you want your subclass to behave differently than their superclass. In the case of our Father Daughter example if we wanted the Daughter to have a different last name we would have to override the last_name function in the Daughter subclass.</p>
 
-<pre>
+<pre><code>
 
 class Father
 	attr_accessor :last_name
@@ -134,7 +135,7 @@ dani = Daughter.new(last_name)
 dad.last_name
 dani.last_name
 
-</pre>
+</code></pre>
 
 					<p>In this case our results are:</p>
 
@@ -147,7 +148,7 @@ dani.last_name
 
 					<p>The last way to use inheritance is if you want to alter behavior before or after the superclass runs.You do this by overriding the function like in the override explicitly method and then use the build in super function to call the superclass function.</p>
 
-<pre>
+<pre><code>
 
 class Father
 	attr_accessor :last_name
@@ -180,7 +181,7 @@ dani = Daughter.new(last_name)
 dad.last_name
 dani.last_name
 
-</pre>
+</code></pre>
 
 				<p>The result you get from this is:</p>
 
@@ -191,7 +192,7 @@ dani.last_name
 
 				<p>If you put in the Daughter subclass like this:</p>
 
-<pre>
+<pre><code>
 
 class Daughter < Father
 
@@ -203,7 +204,7 @@ class Daughter < Father
 	end
 end
 
-s</pre>
+s</code></pre>
 
 				<p>Your result becomes:</p>
 
